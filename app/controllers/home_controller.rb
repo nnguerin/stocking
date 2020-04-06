@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   		begin
 		@stock = StockQuote::Stock.quote(params[:ticker])
 		rescue 
-			@error = params[:ticker] + " ain't no real stock"
+			@error = "What are you, silly? " + params[:ticker] + " ain't no real stock."
 		end
   	end
 	
